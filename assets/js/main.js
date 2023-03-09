@@ -18,7 +18,7 @@ va applicato uno sconto del 40% per gli over 65.
 
 const generateBtn = document.getElementById("generate");
 const resetBtn = document.getElementById("reset");
-const ticketPreviewEl = document.getElementById("ticket_preview");
+const ticketPreview = document.getElementById("ticket_preview");
 
 const generateCarriage = Math.floor(Math.random() * 18) + 1;
 console.log(generateCarriage, "Carrozza");
@@ -78,13 +78,13 @@ generateBtn.addEventListener("click", function () {
 
   // Ta-da, now the ticket shows up
 
-  ticketPreviewEl.classList.remove("d-none");
+  ticketPreview.classList.remove("d-none");
 });
 
 // reset
 
 resetBtn.addEventListener("click", function () {
-  ticketPreviewEl.classList.add("d-none");
+  ticketPreview.classList.add("d-none");
   document.getElementById("name_surname").value = "";
   km.value = "";
   age.value = "over18";
