@@ -53,3 +53,14 @@ resetBtn.addEventListener('click', function() {
   age.value = "over18";
 })
 
+// 
+
+function generateCarriage() {
+    return Math.floor(Math.random() * 18) + 1;
+  }
+
+// show cost on ticket
+
+const ticketPreviewCost = document.getElementById("ticketcost")
+ticketPreviewCost.innerHTML = `${finalPrice} €`
+
