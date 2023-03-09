@@ -24,9 +24,9 @@ const generateCarriage = Math.floor(Math.random() * 18) + 1;
 console.log(generateCarriage, "Carrozza");
 const generateCPCode = Math.floor(Math.random() * 9999) + 90000;
 console.log(generateCPCode, "CP Code");
-let user = document.getElementById("name_surname").value;
 
 generateBtn.addEventListener("click", function () {
+  const user = document.getElementById("name_surname").value;
   const km = Number(document.getElementById("km").value);
   const age = document.getElementById("age").value;
   const costKm = 0.21;
