@@ -33,6 +33,14 @@ generateBtn.addEventListener("click", function () {
   console.log(generateCarriage, "Carriage");
   const generateCPCode = Math.floor(Math.random() * 9999) + 90000;
   console.log(generateCPCode, "CP Code");
+  const date = new Date();
+  console.log(date)
+  const year = date.getFullYear();
+  const month = date.getMonth();
+  const day = date.getDate();
+  const hour = date.getHours();
+  const minutes = date.getMinutes();
+  const seconds = date.getSeconds();
 
   // show name and surname
 
@@ -80,16 +88,19 @@ generateBtn.addEventListener("click", function () {
   console.log(finalPrice, "Current Price");
 
   // Ta-da, now the ticket shows up
-  
+
   if (user && km !== "") {
     ticketPreview.classList.remove("d-none");
   }
   // Ta-da, now shows up an error when occur
 
   if (user == "" || km == "") {
-    alert("ERROR - All fields must be filled up")
+    alert("ERROR - All fields must be filled up");
   }
-  
+
+  // Current Date
+  let currentDate = document.getElementById("date");
+  currentDate.innerHTML = `${day}/${month}/${year} - ${hour}:${minutes}:${seconds}`;
 });
 
 // reset
