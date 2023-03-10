@@ -8,6 +8,34 @@ body {
     background: linear-gradient(90deg, #c41228, rgb(137, 64, 64));
 }
 
+.my_btn{
+    background-color: #c41228;
+    transition: all 0.5s;
+}
+
+.my_btn:hover{
+    transform: scale(1.05);
+    background-color: #e40f28;
+}
+
+i{
+    transition: all 0.5s;
+}
+
+button:hover i{
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    from{
+        transform: rotate(0deg);
+    }
+    
+    to{
+        transform: rotate(360deg);
+    }
+}
+
 .my_color {
     color: #7a0815 !important;
 }
