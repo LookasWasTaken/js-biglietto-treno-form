@@ -1,0 +1,19 @@
+.my_bg{
+    background-color: #c41228 !important;
+}
+
+.my_color{
+    color: #c41228 !important;
+}
+
+.my_border{
+    border: 1px solid #c41228 !important;
+}
+
+input:focus-visible {
+    outline: 1px auto #c41228;
+}
+
+input:hover {
+    border: 2px solid #c41228;
+}

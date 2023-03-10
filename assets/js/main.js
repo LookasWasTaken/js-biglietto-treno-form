@@ -13,24 +13,26 @@ va applicato uno sconto del 40% per gli over 65.
 // - switch / case / break
 // - getElementById / QuerySelector
 // - addEventListener
-// - function()
+// - function() / = () => : Arrow Function
 // - classList
 
 const generateBtn = document.getElementById("generate");
 const resetBtn = document.getElementById("reset");
 const ticketPreview = document.getElementById("ticket_preview");
 
-const generateCarriage = Math.floor(Math.random() * 18) + 1;
-console.log(generateCarriage, "Carrozza");
-const generateCPCode = Math.floor(Math.random() * 9999) + 90000;
-console.log(generateCPCode, "CP Code");
-
 generateBtn.addEventListener("click", function () {
   const user = document.getElementById("name_surname").value;
+  console.log(user, "User");
   const km = Number(document.getElementById("km").value);
+  console.log(km, "KM");
   const age = document.getElementById("age").value;
+  console.log(age, "Age");
   const costKm = 0.21;
   let finalPrice = km * costKm;
+  const generateCarriage = Math.floor(Math.random() * 18) + 1;
+  console.log(generateCarriage, "Carriage");
+  const generateCPCode = Math.floor(Math.random() * 9999) + 90000;
+  console.log(generateCPCode, "CP Code");
 
   // show name and surname
 
@@ -52,11 +54,6 @@ generateBtn.addEventListener("click", function () {
   const codePreview = document.getElementById("cpcode");
   codePreview.innerHTML = `${generateCPCode}`;
 
-  // show cost on ticket
-
-  const ticketPreviewCost = document.getElementById("ticketcost");
-  ticketPreviewCost.innerHTML = `${finalPrice} €`;
-
   switch (age) {
     case "under18":
       finalPrice *= 0.8;
@@ -76,9 +73,23 @@ generateBtn.addEventListener("click", function () {
       );
   }
 
-  // Ta-da, now the ticket shows up
+  // show cost on ticket
 
-  ticketPreview.classList.remove("d-none");
+  let ticketPreviewCost = document.getElementById("ticketcost");
+  ticketPreviewCost.innerHTML = `${finalPrice.toFixed(2)} €`;
+  console.log(finalPrice, "Current Price");
+
+  // Ta-da, now the ticket shows up
+  
+  if (user && km !== "") {
+    ticketPreview.classList.remove("d-none");
+  }
+  // Ta-da, now shows up an error when occur
+
+  if (user == "" || km == "") {
+    alert("ERROR - All fields must be filled up")
+  }
+  
 });
 
 // reset
