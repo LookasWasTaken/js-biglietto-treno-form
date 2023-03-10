@@ -16,11 +16,13 @@ body {
     border: 1px solid #c41228 !important;
 }
 
-input:focus-visible, select:focus-visible {
+input:focus-visible,
+select:focus-visible {
     outline: 1px auto #c41228;
 }
 
-input:hover, select:hover {
+input:hover,
+select:hover {
     border: 2px solid #c41228;
 }
 
@@ -28,27 +30,27 @@ input:hover, select:hover {
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5)
 }
 
-a{
+a {
     text-decoration: none;
     color: #7a0815;
     transition: all 0.2s;
 }
 
-a:hover{
+a:hover {
     color: black;
 }
 
-.box{
+.box {
     transition: all 0.5s;
 }
 
 .box:hover {
     color: #7a0815;
     transform: scale(1.2);
-
 }
 
-input, select{
+input,
+select {
     background-color: #ffffff;
     border: 1px solid #7a0815;
     border-radius: 20px;

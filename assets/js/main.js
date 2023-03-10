@@ -34,7 +34,7 @@ generateBtn.addEventListener("click", function () {
   const generateCPCode = Math.floor(Math.random() * 9999) + 90000;
   console.log(generateCPCode, "CP Code");
   const date = new Date();
-  console.log(date)
+  console.log(date);
   const year = date.getFullYear();
   const month = date.getMonth();
   const day = date.getDate();
