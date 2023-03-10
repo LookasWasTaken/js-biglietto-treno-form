@@ -3,8 +3,11 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-.my_bg {
-    /* background-color: #c41228 !important; */
+.my_bg1 {
+    background-color: #c41228 !important;
+}
+
+.my_bg { 
     background: linear-gradient(90deg, #c41228, rgb(137, 64, 64));
 }
 
