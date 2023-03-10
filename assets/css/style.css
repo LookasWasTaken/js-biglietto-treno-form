@@ -4,7 +4,8 @@ body {
 }
 
 .my_bg {
-    background-color: #c41228 !important;
+    /* background-color: #c41228 !important; */
+    background: linear-gradient(90deg, #c41228, rgb(137, 64, 64));
 }
 
 .my_color {
@@ -15,11 +16,11 @@ body {
     border: 1px solid #c41228 !important;
 }
 
-input:focus-visible {
+input:focus-visible, select:focus-visible {
     outline: 1px auto #c41228;
 }
 
-input:hover {
+input:hover, select:hover {
     border: 2px solid #c41228;
 }
 
@@ -41,8 +42,16 @@ a:hover{
     transition: all 0.5s;
 }
 
-.box:hover{
+.box:hover {
     color: #7a0815;
     transform: scale(1.2);
 
+}
+
+input, select{
+    background-color: #ffffff;
+    border: 1px solid #7a0815;
+    border-radius: 20px;
+    padding-left: 20px;
+    height: 2rem;
 }
