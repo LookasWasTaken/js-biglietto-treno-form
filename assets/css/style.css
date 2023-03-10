@@ -36,3 +36,13 @@ a{
 a:hover{
     color: black;
 }
+
+.box{
+    transition: all 0.5s;
+}
+
+.box:hover{
+    color: #7a0815;
+    transform: scale(1.2);
+
+}
